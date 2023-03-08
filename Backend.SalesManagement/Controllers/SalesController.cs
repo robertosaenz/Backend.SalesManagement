@@ -1,17 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using Backend.SalesManagement.Models;
+using Backend.SalesManagement.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Backend.SalesManagement.Models;
-using Backend.SalesManagement.Services.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Backend.SalesManagement.Validations;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Backend.SalesManagement.Controllers
 {
     [Route("api/sales")]
     [ApiController]
-    public class SalesController : Controller
+    public class SalesController : ControllerBase
     {
         private readonly ISalesService _salesService;
 
@@ -20,6 +22,7 @@ namespace Backend.SalesManagement.Controllers
             this._salesService = salesService;
         }
 
+        [Authorize]
         [HttpPost("create")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -39,23 +42,7 @@ namespace Backend.SalesManagement.Controllers
             }
         }
 
-        [HttpGet("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult GetAllByUserAccountId(string id)
-        {
-            if (!String.IsNullOrEmpty(id))
-            {
-                var result = _salesService.GetAllByUserAccountId(id);
-
-                return Ok(result);
-            }
-            else
-            {
-                return BadRequest();
-            }
-        }
-
+        [Authorize]
         [HttpPost("update")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -73,6 +60,7 @@ namespace Backend.SalesManagement.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult GetAll()
@@ -82,6 +70,25 @@ namespace Backend.SalesManagement.Controllers
             return Ok(result);
         }
 
+        [Authorize]
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult GetAllByUserAccountId(string id)
+        {
+            if (!String.IsNullOrEmpty(id))
+            {
+                var result = _salesService.GetAllByUserAccountId(id);
+
+                return Ok(result);
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+
+        [Authorize]
         [HttpPost("delete/{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

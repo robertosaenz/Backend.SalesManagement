@@ -14,9 +14,21 @@ namespace Backend.SalesManagement.Services
     {
         private readonly ISalesRepository _repository;
 
+        public SalesService(ISalesRepository repository)
+        {
+            _repository = repository;
+        }
+
         public async Task<Sales> Create(Sales sales)
         {
-            throw new NotImplementedException();
+            sales.LastUpdatedDateTime = DateTime.UtcNow;
+
+            var success = await _repository.Create(sales);
+
+            if (success)
+                return sales;
+            else
+                return null;
         }
 
         public async Task<bool> Delete(string salesId)

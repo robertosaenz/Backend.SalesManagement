@@ -1,22 +1,34 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-    <UserSecretsId>d4a0a283-171a-49d2-b78d-c0a214bc1699</UserSecretsId>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>67477aa0-e4aa-4fe5-b774-1edeed6b71ee</UserSecretsId>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+    <Compile Remove="Auth\IUserService.cs" />
+    <Compile Remove="Auth\User.cs" />
+    <Compile Remove="Auth\UserService.cs" />
+    <Compile Remove="Controllers\LoginController.cs" />
+    <Compile Remove="Controllers\UserController.cs" />
+    <Compile Remove="Models\Policies.cs" />
+    <Compile Remove="Models\User.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.32" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Backend.SalesManagement.Context\Backend.SalesManagement.Context.csproj" />
+    <ProjectReference Include="..\Backend.SalesManagement.Models\Backend.SalesManagement.Models.csproj" />
+    <ProjectReference Include="..\Backend.SalesManagement.Repositories\Backend.SalesManagement.Repositories.csproj" />
     <ProjectReference Include="..\Backend.SalesManagement.Services\Backend.SalesManagement.Services.csproj" />
     <ProjectReference Include="..\Backend.SalesManagement.Validations\Backend.SalesManagement.Validations.csproj" />
   </ItemGroup>
-
-  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

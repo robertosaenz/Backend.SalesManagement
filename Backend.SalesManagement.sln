@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33328.57
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.SalesManagement.Models", "Backend.SalesManagement.Models\Backend.SalesManagement.Models.csproj", "{A0F9DE78-3238-4B35-8A33-76AC965F9E9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.SalesManagement.Models", "Backend.SalesManagement.Models\Backend.SalesManagement.Models.csproj", "{A0F9DE78-3238-4B35-8A33-76AC965F9E9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.SalesManagement.Context", "Backend.SalesManagement.Context\Backend.SalesManagement.Context.csproj", "{E9EE8554-18E5-4B47-B8EC-B12A1D186034}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.SalesManagement.Context", "Backend.SalesManagement.Context\Backend.SalesManagement.Context.csproj", "{E9EE8554-18E5-4B47-B8EC-B12A1D186034}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.SalesManagement.Repositories", "Backend.SalesManagement.Repositories\Backend.SalesManagement.Repositories.csproj", "{F81723A9-02DB-4D6E-80A0-C537C783837B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.SalesManagement.Repositories", "Backend.SalesManagement.Repositories\Backend.SalesManagement.Repositories.csproj", "{F81723A9-02DB-4D6E-80A0-C537C783837B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.SalesManagement.Validations", "Backend.SalesManagement.Validations\Backend.SalesManagement.Validations.csproj", "{7ECDFD83-8F1A-4077-96B0-9501B9FBC73F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.SalesManagement.Validations", "Backend.SalesManagement.Validations\Backend.SalesManagement.Validations.csproj", "{7ECDFD83-8F1A-4077-96B0-9501B9FBC73F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.SalesManagement.Services", "Backend.SalesManagement.Services\Backend.SalesManagement.Services.csproj", "{2EF9B33A-ABF2-496B-A7FA-50619821A0D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.SalesManagement.Services", "Backend.SalesManagement.Services\Backend.SalesManagement.Services.csproj", "{2EF9B33A-ABF2-496B-A7FA-50619821A0D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.SalesManagement", "Backend.SalesManagement\Backend.SalesManagement.csproj", "{60367EEA-4B24-440B-B76D-AB703F0FC32B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.SalesManagement", "Backend.SalesManagement\Backend.SalesManagement.csproj", "{A5824757-2878-46BA-83A7-1BAA04D02121}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{2EF9B33A-ABF2-496B-A7FA-50619821A0D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EF9B33A-ABF2-496B-A7FA-50619821A0D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EF9B33A-ABF2-496B-A7FA-50619821A0D3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60367EEA-4B24-440B-B76D-AB703F0FC32B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60367EEA-4B24-440B-B76D-AB703F0FC32B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60367EEA-4B24-440B-B76D-AB703F0FC32B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60367EEA-4B24-440B-B76D-AB703F0FC32B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5824757-2878-46BA-83A7-1BAA04D02121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5824757-2878-46BA-83A7-1BAA04D02121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5824757-2878-46BA-83A7-1BAA04D02121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5824757-2878-46BA-83A7-1BAA04D02121}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
